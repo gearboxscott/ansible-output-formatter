@@ -1,0 +1,92 @@
+{
+  "name": "ansible-output-formatter",
+  "displayName": "Ansible Output Formatter",
+  "description": "Format and syntax highlight Ansible job template output with JSON content",
+  "version": "1.0.0",
+  "publisher": "gearboxscott",
+  "author": {
+    "name": "Scott Parker",
+    "email": "sparker@redhat.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gearboxscott/ansible-output-formatter.git"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Formatters",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onCommand:ansibleFormatter.formatAndHighlight",
+    "onCommand:ansibleFormatter.formatOutput",
+    "onCommand:ansibleFormatter.setLanguage",
+    "onLanguage:ansible-output"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ansible-output",
+        "aliases": [
+          "Ansible Output",
+          "ansible-output"
+        ],
+        "extensions": [
+          ".ansible-output"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ansible-output",
+        "scopeName": "source.ansible-output",
+        "path": "./syntaxes/ansible-output.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ansibleFormatter.formatOutput",
+        "title": "Format Ansible Output"
+      },
+      {
+        "command": "ansibleFormatter.setLanguage",
+        "title": "Set Language to Ansible Output"
+      },
+      {
+        "command": "ansibleFormatter.formatAndHighlight",
+        "title": "Format and Highlight Ansible Output"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ansibleFormatter.formatAndHighlight",
+        "key": "ctrl+shift+f",
+        "mac": "cmd+shift+f",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ansibleFormatter.formatAndHighlight",
+          "group": "1_modification",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}

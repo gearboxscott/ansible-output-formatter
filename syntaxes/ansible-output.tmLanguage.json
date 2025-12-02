@@ -1,0 +1,122 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Ansible Output",
+  "scopeName": "source.ansible-output",
+  "patterns": [
+    {
+      "include": "#task-header"
+    },
+    {
+      "include": "#play-header"
+    },
+    {
+      "include": "#task-status"
+    },
+    {
+      "include": "#task-path"
+    },
+    {
+      "include": "#ansible-arrow"
+    },
+    {
+      "include": "#host-brackets"
+    },
+    {
+      "include": "#json-content"
+    }
+  ],
+  "repository": {
+    "task-header": {
+      "match": "^(TASK|PLAY|PLAY RECAP) \\[(.+?)\\]\\s*(\\**)\\s*$",
+      "captures": {
+        "1": {
+          "name": "keyword.control"
+        },
+        "2": {
+          "name": "entity.name.function"
+        },
+        "3": {
+          "name": "comment.line"
+        }
+      }
+    },
+    "play-header": {
+      "match": "^(GATHERING FACTS|META|RUNNING HANDLER|NOTIFIED HANDLER)",
+      "name": "keyword.control"
+    },
+    "task-status": {
+      "match": "^(ok|changed|failed|fatal|skipping|ignored):",
+      "captures": {
+        "1": {
+          "name": "support.function"
+        }
+      }
+    },
+    "task-path": {
+      "match": "^task path:",
+      "name": "comment.line"
+    },
+    "ansible-arrow": {
+      "match": "=>",
+      "name": "keyword.operator"
+    },
+    "host-brackets": {
+      "match": "\\[([a-zA-Z0-9_.-]+)\\]",
+      "captures": {
+        "1": {
+          "name": "variable.parameter"
+        }
+      }
+    },
+    "json-content": {
+      "patterns": [
+        {
+          "include": "#json-string"
+        },
+        {
+          "include": "#json-number"
+        },
+        {
+          "include": "#json-constant"
+        },
+        {
+          "include": "#json-bracket"
+        },
+        {
+          "include": "#json-key"
+        }
+      ]
+    },
+    "json-string": {
+      "name": "string.quoted.double",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "json-number": {
+      "match": "\\b\\d+(\\.\\d+)?([eE][+-]?\\d+)?\\b",
+      "name": "constant.numeric"
+    },
+    "json-constant": {
+      "match": "\\b(true|false|null)\\b",
+      "name": "constant.language"
+    },
+    "json-bracket": {
+      "match": "[\\{\\}\\[\\]()]",
+      "name": "punctuation.definition.bracket"
+    },
+    "json-key": {
+      "match": "\"([^\"]+)\"\\s*:",
+      "captures": {
+        "1": {
+          "name": "support.type.property-name"
+        }
+      }
+    }
+  }
+}
