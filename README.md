@@ -110,7 +110,7 @@ For more issues, see [GitHub Issues](https://github.com/gearboxscott/ansible-out
 
 ## Release Notes
 
-[Release Notes]([images/after.png](https://github.com/gearboxscott/ansible-output-formatter/CHANGELOG.md)
+[Release Notes](https://github.com/gearboxscott/ansible-output-formatter/CHANGELOG.md)
 
 ## Contributing
 
