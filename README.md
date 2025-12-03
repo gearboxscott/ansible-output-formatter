@@ -36,8 +36,12 @@ Format and syntax highlight Ansible Automation Platform job output for easier de
 
 Download the `.vsix` file from [Releases](https://github.com/gearboxscott/ansible-output-formatter/releases) and install via:
 ```bash
-code --install-extension ansible-output-formatter-1.0.2.vsix
+code --install-extension ansible-output-formatter-1.0.x.vsix
 ```
+
+| :memo: Installation Note |
+|:--|
+| Replace the `x` or the `1.0.x` with the correct version to install or that latest version to install see the CHANGELOG.md or tag for the current release number |
 
 ## Usage
 
