@@ -36,7 +36,7 @@ Format and syntax highlight Ansible Automation Platform job output for easier de
 
 Download the `.vsix` file from [Releases](https://github.com/gearboxscott/ansible-output-formatter/releases) and install via:
 ```bash
-code --install-extension ansible-output-formatter-1.0.0.vsix
+code --install-extension ansible-output-formatter-1.0.2.vsix
 ```
 
 ## Usage
@@ -110,19 +110,7 @@ For more issues, see [GitHub Issues](https://github.com/gearboxscott/ansible-out
 
 ## Release Notes
 
-### 1.0.0 (Latest)
-
-- 🎉 Initial release
-- ✨ Combined format and highlight into single command
-- 🎨 Improved syntax highlighting reliability
-- 🔧 Better handling of Python dict notation
-- 📦 Prepared for VSCode Marketplace publishing
-- 🐛 Fixed version numbering
-- 📝 Enhanced documentation
-- 📦 Added marketplace metadata
-- ✨ Custom language definition for Ansible output
-- ✨ JSON formatting
-- 🔄 Python dict conversion
+[Release Notes]([images/after.png](https://github.com/gearboxscott/ansible-output-formatter/CHANGELOG.md)
 
 ## Contributing
 

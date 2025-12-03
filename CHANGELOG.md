@@ -2,6 +2,13 @@
 
 All notable changes to the "ansible-output-formatter" extension will be documented in this file.
 
+## [v1.0.2] - 2025-12-03
+
+### Updated
+- 📝 Updated images
+
+[1.0.2]: https://github.com/gearboxscott/ansible-output-formatter/releases/tag/v1.0.2
+
 ## [v1.0.1] - 2025-12-03
 
 ### Updated
