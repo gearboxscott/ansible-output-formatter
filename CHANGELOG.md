@@ -2,6 +2,13 @@
 
 All notable changes to the "ansible-output-formatter" extension will be documented in this file.
 
+## [1.0.1] - 2025-12-03
+
+### Updated
+- 📝 Updated images
+
+[1.0.1]: https://github.com/gearboxscott/ansible-output-formatter/releases/tag/v1.0.1
+
 ## [v1.0.0] - 2025-11-21
 
 ### Added
@@ -17,4 +24,4 @@ All notable changes to the "ansible-output-formatter" extension will be document
 - ✨ JSON formatting
 - 🔄 Python dict conversion
 
-[v1.0.0]: https://github.com/gearboxscott/ansible-output-formatter/releases/tag/v1.0.0
+[1.0.0]: https://github.com/gearboxscott/ansible-output-formatter/releases/tag/v1.10.0
