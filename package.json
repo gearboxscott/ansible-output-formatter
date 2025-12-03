@@ -2,7 +2,7 @@
   "name": "ansible-output-formatter",
   "displayName": "Ansible Output Formatter",
   "description": "Format and syntax highlight Ansible job template output with JSON content",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "gearboxscott",
   "author": {
     "name": "Scott Parker",
